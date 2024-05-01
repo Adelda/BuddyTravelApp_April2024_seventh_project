@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Assistance</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="segmentValue" class="segment">
+    <ion-segment-button value="faq" class="segment-button" [class.orange-text]="segmentValue === 'faq'" [class.blue-text]="segmentValue === 'contact'">FAQ</ion-segment-button>
+    <ion-segment-button value="contact" class="segment-button" [class.orange-text]="segmentValue === 'contact'" [class.blue-text]="segmentValue === 'faq'">Nous contacter</ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segmentValue">
+    <div *ngSwitchCase="'faq'">
+      <ion-accordion-group [multiple]="true" [value]="['first', 'fourth']">
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label class="faq-ask">Qui est Buddy?</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Buddy est votre compagnon de voyage intelligent. C'est une application
+            concue pour vous aider à planifier
+            vos déplacements, à trouver des aires de repos, des attractions locales et bien plus encore. Buddy rend vos
+            voyages sur la route plus agréables et plus faciles.</div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label class="faq-ask">Quels sont les services disponibles dans les aires de repos?</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Les services disponibles peuvent inclure des toilettes, des aires de
+            pique-nique,des restaurants, des stations-services, etc...</div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label class="faq-ask">Comment puis-je trouver une aire de repos spécifique?</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Vous pouvez utiliser la fonction de recherche sur la page d'acceuil
+            pour rechercher une aire de repos par nom ou par emplacement géographique.</div>
+        </ion-accordion>
+        <ion-accordion value="fourth">
+          <ion-item slot="header" color="light">
+            <ion-label class="faq-ask">Comment puis-je obtenir des détails sur une aire de repos particulière?</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Vous pouvez cliquer sur le nom d'une aire de repos dans la liste pour
+            accéder à sa page de détail, où vous trouverez des informations telles que le nom, la description, les
+            photos et les services disponibles.</div>
+        </ion-accordion>
+      </ion-accordion-group>
+
+    </div>
+    <div *ngSwitchCase="'contact'">
+      <form>
+        <ion-item lines="none">
+          <ion-label position="floating">Mail:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-input type="email" name="email" placeholder=" Mail@mail.com"></ion-input>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="floating">Message:</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-textarea name="message" placeholder=" Votre message ici..."></ion-textarea>
+        </ion-item>
+        <ion-button expand="block" type="submit">Envoyer</ion-button>
+      </form>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="home-outline"></ion-icon>
+          Accueil
+        </ion-tab-button>
+        <ion-tab-button tab="radio">
+          <ion-icon name="navigate-circle-outline"></ion-icon>
+          Itineraire
+        </ion-tab-button>
+        <ion-tab-button tab="search">
+          <ion-icon name="search-outline"></ion-icon>
+          Recherche
+        </ion-tab-button>
+        <ion-tab-button tab="library">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          A propos
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,65 @@
+ion-accordion {
+  border: none;
+  box-shadow: none;
+}
+
+ion-accordion ion-item {
+  padding: 10px;
+}
+
+ion-accordion ion-item.ion-activated {
+  background-color: #f2f2f2;
+}
+
+ion-accordion ion-item.ion-activated ion-label {
+  font-weight: bold;
+}
+
+/* Assurez-vous que les contours des ion-input sont toujours visibles */
+ion-input {
+  border: 1px solid black; /* Ajoute une bordure d'un pixel autour de l'input */
+  border-radius: 8px; /* Ajoute un arrondi aux coins de l'input */
+}
+
+
+/* Ajouter de l'espace supplémentaire au-dessus du premier ion-input */
+ion-input:first-child {
+  margin-top: 15px; /* Espacement en haut du premier ion-item */
+}
+
+.long-message-input {
+  height: 200px; /* Réglez la hauteur selon vos préférences */
+  min-height: 100px; /* Définissez une hauteur minimale */
+  resize: vertical; /* Autorisez le redimensionnement vertical si nécessaire */
+}
+
+/* Appliquer des styles CSS au deuxième input (pour le message) */
+ion-item:nth-of-type(4) ion-textarea {
+  border: 1px solid black; /* Ajouter une bordure noire */
+  min-height: 150px; /* Définir une hauteur minimale pour l'input */
+  margin-bottom: 20px;
+}
+
+.segment {
+  height: 60px; /* Ajuster la taille de la police */
+}
+
+.segment-button {
+  min-width: 100px; /* Ajuster la largeur minimale des boutons */
+  font-weight: bold; /* Mettre en gras le texte des boutons */
+  font-size: 1.2em; /* Ajuster la taille de la police */
+}
+
+.orange-text {
+  color: orange; /* Couleur orange */
+}
+
+.blue-text {
+  color: blue; /* Couleur bleue */
+}
+
+.faq-ask {
+  font-weight: bold; /* Mettre en gras le texte */
+  font-size: 1.1em; /* Ajuster la taille de la police */
+  color: blue; /* Couleur bleue */
+}

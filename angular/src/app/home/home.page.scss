@@ -1,0 +1,77 @@
+.separator {
+  height: 2px;
+  background-color: #ccc; // A light grey color; adjust as needed
+  margin: 10px 0; // Adds vertical space around the separator
+}
+
+.card-title-with-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-card-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.locate-text, .card-location {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.distance, .location-text {
+  margin-left: 5px;
+}
+
+.service-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px; // Adds space between the separator and the logos
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.location-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // Aligns items vertically in the center
+  width: 100%; // Ensures the container spans the full width of its parent
+}
+
+ion-card {
+  padding-bottom: 10px; // Réduit spécifiquement le padding au bas de la carte
+}
+
+.header {
+  background-color: white; /* Couleur de fond blanche */
+}
+
+.title {
+  color: rgb(229, 130, 16); /* Couleur du texte blanc */
+  flex: 1; /* Permet au texte de s'étendre pour remplir l'espace disponible */
+  text-align: center; /* Centre le texte horizontalement */
+  z-index: 10;
+  font-size: 1.5em; /* Taille de la police */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Centre l'image verticalement */
+  justify-content: flex-end;
+  margin-right: 10px; /* Marge à droite pour séparer le logo du bord de l'écran */
+  height: 70px; /* Hauteur de l'image */
+}
+
+.logo {
+  width: 70px; /* Largeur de l'image */
+  border-radius: 50%; /* Rend l'image circulaire */
+}

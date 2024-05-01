@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tabs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tabs</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="home-outline"></ion-icon>
+          Accueil
+        </ion-tab-button>
+        <ion-tab-button tab="itinerary">
+          <ion-icon name="navigate-circle-outline"></ion-icon>
+          Itinéraire
+        </ion-tab-button>
+        <ion-tab-button tab="restarea-detail">
+          <ion-icon name="search-outline"></ion-icon>
+          Recherche
+        </ion-tab-button>
+        <ion-tab-button tab="assistance">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          A propos
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

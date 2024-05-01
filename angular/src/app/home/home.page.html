@@ -1,0 +1,79 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar collapse="condense">
+    <!-- Supprimez le ion-title de ici -->
+    <div class="logo-container">
+      <img src="/assets/images/buddy-header.png" alt="Logo" class="logo">
+    </div>
+  </ion-toolbar>
+  <!-- Ajoutez le ion-title ici -->
+  <ion-title class="title">BUDDY</ion-title>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="header" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <ion-searchbar></ion-searchbar>
+
+  <ng-container *ngFor="let restArea of restAreas">
+    <ion-card>
+      <ion-card-header> <!-- Placez cette balise ici, à l'extérieur de la boucle *ngFor -->
+        <ion-card-title>
+          {{ restArea.name }}
+        </ion-card-title>
+        <div class="separator"></div>
+        <div class="location-info">
+          <div class="locate-text">
+            <ion-icon name="locate-outline" size="small" color="primary"></ion-icon>
+            <span class="distance">25 KM</span>
+            <!-- Ici, vous pouvez utiliser la distance réelle si elle est disponible dans vos données -->
+          </div>
+          <div class="card-location">
+            <ion-icon name="location-outline" size="small" color="primary"></ion-icon>
+            <span class="location-text">{{ restArea.latitude }}, {{ restArea.longitude }}</span>
+            <!-- Affichage des coordonnées -->
+          </div>
+        </div>
+      </ion-card-header>
+      <div *ngFor="let photo of restArea.photos">
+        <img [src]="photo.url" alt="Rest Area Photo"> <!-- Utilisation de la première photo de la zone de repos -->
+      </div>
+      <div class="service-icons">
+        <!-- Vous pouvez boucler sur les services associés à la zone de repos ici -->
+        <ng-container *ngFor="let service of restArea.restAreaServices">
+          <img [src]="service.iconUrl" class="service-icon">
+        </ng-container>
+      </div>
+      <div class="ion-text-center">
+        <ion-button routerLink="/assistance">Y Aller</ion-button>
+        <ion-button [routerLink]="['/restarea-detail', restArea.id]">Détails</ion-button>
+      </div>
+    </ion-card>
+  </ng-container>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="home-outline"></ion-icon>
+          Accueil
+        </ion-tab-button>
+        <ion-tab-button tab="itinerary">
+          <ion-icon name="navigate-circle-outline"></ion-icon>
+          Itineraire
+        </ion-tab-button>
+        <ion-tab-button tab="restarea-detail">
+          <ion-icon name="search-outline"></ion-icon>
+          Recherche
+        </ion-tab-button>
+        <ion-tab-button tab="assistance">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          A propos
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

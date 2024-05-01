@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="arrow-back-circle-outline" slot="icon-only" (click)="goBack()"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="grid-container">
+    <!-- Moitié supérieure de la page pour l'image -->
+    <div class="image-container">
+      <!-- Vous pouvez charger l'image correspondante à partir de l'identifiant de l'aire de repos -->
+      <!-- Par exemple : -->
+      <!-- <img [src]="'/assets/images/' + restAreaId + '.jpg'" alt="Image de l'aire d'autoroute"> -->
+    </div>
+
+    <!-- Moitié inférieure de la page pour les détails -->
+    <div class="details-container">
+      <!-- Nom de l'aire d'autoroute -->
+      <h2>{{ restArea.name }}</h2>
+
+      <!-- Localisation -->
+      <div class="card-location">
+        <ion-icon name="location-outline" size="small" color="primary"></ion-icon>
+        <p>Paris, France</p>
+      </div>
+      <div class="separator"></div>
+      <!-- Texte détaillant les horaires des boutiques -->
+      <div class="description">
+        <h3>Horaires des boutiques</h3>
+        <p>Horaires d'ouverture : 8h00 - 20h00</p>
+        <p>Horaires de fermeture : 22h00 - 6h00</p>
+        <!-- Ajoutez d'autres détails au besoin -->
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <ion-icon name="home-outline"></ion-icon>
+          Accueil
+        </ion-tab-button>
+        <ion-tab-button tab="radio">
+          <ion-icon name="navigate-circle-outline"></ion-icon>
+          Itineraire
+        </ion-tab-button>
+        <ion-tab-button tab="search">
+          <ion-icon name="search-outline"></ion-icon>
+          Recherche
+        </ion-tab-button>
+        <ion-tab-button tab="library">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          A propos
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

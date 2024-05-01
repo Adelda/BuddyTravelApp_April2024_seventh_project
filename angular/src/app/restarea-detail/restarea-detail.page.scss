@@ -1,0 +1,45 @@
+.grid-container {
+  display: grid; /* Utilisation de la grille CSS */
+  grid-template-columns: 1fr; /* Une colonne */
+  grid-template-rows: 1fr 1fr; /* Deux rangées de taille égale */
+  height: 100vh; /* Hauteur de la page */
+}
+
+.image-container {
+  background-color: #f0f0f0; /* Couleur de fond de la moitié supérieure */
+  display: flex;
+  align-items: center; /* Centrer le contenu verticalement */
+  justify-content: center; /* Centrer le contenu horizontalement */
+  overflow: hidden; /* Masquer tout contenu débordant */
+}
+
+.image-container img {
+  width: 100%; /* Pour que l'image prenne toute la largeur */
+  height: 100%; /* Pour que la hauteur s'ajuste automatiquement */
+}
+
+.details-container {
+  background-color: #fefcfc; /* Couleur de fond de la moitié inférieure */
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Espacement autour des détails */
+  border-top-left-radius: 20px; /* Arrondir le coin supérieur gauche */
+  border-top-right-radius: 20px; /* Arrondir le coin supérieur droit */
+  margin-top: -20px;
+}
+
+.description {
+  margin-top: 20px; /* Espacement supplémentaire au-dessus de la description */
+}
+
+.separator {
+  height: 2px;
+  background-color: #ccc; // A light grey color; adjust as needed
+  margin: 10px 0; // Adds vertical space around the separator
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
